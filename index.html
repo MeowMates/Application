@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeowMates</title>
-</head>
-<body>
-    <h1>Welcome to MeowMates</h1>
-    <p>Your source for feline companionship! Application coming soon!</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Welcome to MeowMates!</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <style>
+      /* Center the button */
+      .instructions {
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50; /* Green color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        <h1 class="title">Welcome to MeowMates!</h1>
+        <img
+          src="https://cdn.glitch.global/c4d71f23-aaca-4e2e-8767-637a2088b4a9/zoe-gayah-jonker-G7kUPmzi80E-unsplash.jpg?v=1702566804827"
+          class="illustration"
+          alt="Editor illustration"
+          title="Cute Cat!"
+        />
+        <div class="instructions">
+          <h2>Because Every Home Deserves a Purr-fect Friend!</h2>
+          <button
+            onclick="window.location.href='https://adoption-quiz.glitch.me/'"
+          >
+            Adoption Quiz!
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
