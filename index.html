@@ -13,9 +13,21 @@
     <!-- The website JavaScript file -->
     <script src="/script.js" defer></script>
     <style>
-      /* Center the button */
-      .instructions {
+      /* Center the content */
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Adjust the height if needed */
+      }
+
+      .content {
         text-align: center;
+      }
+
+      .instructions {
+        margin-top: 20px; /* Add space between the image and the text */
       }
 
       button {
@@ -38,18 +50,14 @@
       <div class="content" role="main">
         <h1 class="title">Welcome to MeowMates!</h1>
         <img
-  src="https://cdn.glitch.global/c4d71f23-aaca-4e2e-8767-637a2088b4a9/zoe-gayah-jonker-G7kUPmzi80E-unsplash.jpg?v=1702566804827"
-  title="Cute Cat!"
-  width="300"  
-  height="400" 
+          src="https://cdn.glitch.global/c4d71f23-aaca-4e2e-8767-637a2088b4a9/zoe-gayah-jonker-G7kUPmzi80E-unsplash.jpg?v=1702566804827"
+          title="Cute Cat!"
+          width="300"
+          height="400"
         />
         <div class="instructions">
           <h2>Because Every Home Deserves a Purr-fect Friend!</h2>
-          <button
-            onclick="window.location.href='Quiz.html'"
-          >
-            Adoption Quiz!
-          </button>
+          <button onclick="window.location.href='Quiz.html'">Adoption Quiz!</button>
         </div>
       </div>
     </div>
