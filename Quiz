@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MeowMates Quiz</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: #f5f5f5; 
+        color: #4caf50; 
+      }
+
+      h1 {
+        font-size: 24px; 
+      }
+
+      form {
+        margin: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MeowMates Quiz</h1>
+    <form>
+      <label>
+        Do you have children at home?
+        <br />
+        <input type="radio" name="children" value="yes" /> Yes
+        <input type="radio" name="children" value="no" /> No
+      </label>
+      <label>
+        Do you own other cats?
+        <br />
+        <input type="radio" name="cats" value="yes" /> Yes
+        <input type="radio" name="cats" value="no" /> No
+      </label>
+      <label>
+        Do you own any dogs?
+        <br />
+        <input type="radio" name="dogs" value="yes" /> Yes
+        <input type="radio" name="dogs" value="no" /> No
+      </label>
+      <label>
+        Are you comfortable with a special needs cat?
+        <br />
+        <input type="radio" name="special" value="yes" /> Yes
+        <input type="radio" name="special" value="no" /> No
+      </label>
+      <label>
+        Do you have a gender preference?
+        <br />
+        <input type="radio" name="gender" value="male" /> Male
+        <input type="radio" name="gender" value="female" /> Female
+        <input type="radio" name="gender" value="unknown" /> Either
+      </label>
+      <label>
+        Age preference(s) (please check one or more options):
+        <br />
+        <input type="checkbox" name="age" value="baby" /> Baby
+        <input type="checkbox" name="age" value="young" /> Young
+        <input type="checkbox" name="age" value="adult" /> Adult
+        <input type="checkbox" name="age" value="senior" /> Senior
+      </label>
+      <br />
+      <label>
+        Size preference(s) (please check one or more options):
+        <br />
+        <input type="checkbox" name="size" value="small" /> Small
+        <input type="checkbox" name="size" value="medium" /> Medium
+        <input type="checkbox" name="size" value="large" /> Large
+        <input type="checkbox" name="size" value="xlarge" /> XLarge
+      </label>
+      <br />
+      <label>
+        Coat preference(s) (please check one or more options):
+        <br />
+        <input type="checkbox" name="size" value="short" /> Short
+        <input type="checkbox" name="size" value="medium" /> Medium
+        <input type="checkbox" name="size" value="long" /> Long
+        <input type="checkbox" name="size" value="hairless" /> Hairless
+      </label>
+      <br />
+      <label>
+        Enter your location (city, state; or postal code):
+        <br />
+        <input type="text" name="location" placeholder="Enter your location" />
+      </label>
+      <br />
+      <label>
+        Select search radius:
+        <br />
+        <select name="radius">
+          <option value="5">Within 5 miles</option>
+          <option value="10">Within 10 miles</option>
+          <option value="25">Within 25 miles</option>
+          <option value="50">Within 50 miles</option>
+
+          <!-- Add more options as needed -->
+        </select>
+      </label>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
