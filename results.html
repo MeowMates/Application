@@ -6,22 +6,64 @@
     <title>MeowMates - Adoption Results</title>
     <link rel="stylesheet" href="/style.css" />
     <!-- Include your stylesheet -->
+    <style>
+      body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .cat-row {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+
+      .cat-card {
+        width: 18%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cat-card img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Adoption Results</h1>
+    <h1>Results</h1>
 
-    {% if cat_data %} {% for cat in cat_data['animals'] %}
-    <div class="cat-card">
-      <img src="{{ cat['photos'][0]['large'] }}" alt="Cat Image" />
-      <h2>{{ cat['name'] }}</h2>
-      <p>Age: {{ cat['age'] }}</p>
-      <p>Size: {{ cat['size'] }}</p>
-      <p>Breed: {{ cat['breeds']['primary'] }}</p>
-      <p>Description: {{ cat['description'] }}</p>
-      <p>Coat: {{ cat_data['type']['coats']|join(', ') }}</p>
-      <p>Colors: {{ cat_data['type']['colors']|join(', ') }}</p>
-      <p>Genders: {{ cat_data['type']['genders']|join(', ') }}</p>
-      <a href="{{ cat['url'] }}" target="_blank">Learn More</a>
+    {% if cat_data %} {% set num_rows = 10 %} {% set cats_per_row = 5 %} {% for
+    row_num in range(num_rows) %}
+    <div class="cat-row">
+      {% for cat_num in range(row_num * cats_per_row, (row_num + 1) *
+      cats_per_row) %} {% if cat_num &lt; cat_data['animals']|length %}
+      <div class="cat-card">
+        <img
+          src="{{ cat_data['animals'][cat_num]['photos'][0]['large'] }}"
+          alt="Cat Image"
+        />
+        <h2>{{ cat_data['animals'][cat_num]['name'] }}</h2>
+        <p>Age: {{ cat_data['animals'][cat_num]['age'] }}</p>
+        <p>Size: {{ cat_data['animals'][cat_num]['size'] }}</p>
+        <p>Breed: {{ cat_data['animals'][cat_num]['breeds']['primary'] }}</p>
+        <p>Description: {{ cat_data['animals'][cat_num]['description'] }}</p>
+        <p>Coat: {{ cat_data['type']['coats']|join(', ') }}</p>
+        <p>Colors: {{ cat_data['type']['colors']|join(', ') }}</p>
+        <p>Genders: {{ cat_data['type']['genders']|join(', ') }}</p>
+        <a href="{{ cat_data['animals'][cat_num]['url'] }}" target="_blank"
+          >Learn More</a
+        >
+      </div>
+      {% endif %} {% endfor %}
     </div>
     {% endfor %} {% else %}
     <p>No cat data available. Please try again later.</p>
